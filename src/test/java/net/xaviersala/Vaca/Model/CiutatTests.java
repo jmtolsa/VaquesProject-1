@@ -67,7 +67,7 @@ public class CiutatTests {
                 if (litresCamio%2==0)
                     preuLlet +=0.1;
                 else
-                    preuLlet -=0.1;
+                    preuLlet +=0.1;
                 for (Iterator<Vaca> iterator = vaques.iterator(); iterator.hasNext();) {
                     Vaca next = iterator.next();
                     

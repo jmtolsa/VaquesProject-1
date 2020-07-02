@@ -25,6 +25,10 @@ class Ciutat {
             litresCamio += next.getRaca().getLitresPerKg();
             //Aqui hauriem de fer càlculs per treure el preu de la llet
         }
+        
+        
+        //Aqui ara s'han de fer correccions per que no està passant els tests
+        
         if (litresCamio%2==0)
             preuLlet +=0.1;
         else
