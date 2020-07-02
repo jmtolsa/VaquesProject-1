@@ -16,7 +16,7 @@ import org.junit.jupiter.params.provider.ValueSource;
  */
 public class RacaTests {
 
-	Raca sut;
+	Raca sut; 
 
 	@BeforeEach
 	public void setUp() throws Exception {
