@@ -5,22 +5,40 @@
  */
 package net.xaviersala.Vaca.Model;
 
+import java.util.Iterator;
+import java.util.List;
+
 /**
  *
  * @author tolsa
  */
 class Ciutat {
 
-    static double getPreuLlet() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    static int litresCiutat;
+    private String nom;
+    static double getPreuLlet(Camio camio) {
+        double preuLlet = 1.1;
+        List<Vaca> vaques =camio.getVaques();
+        int litresCamio=0;
+        for (Iterator<Vaca> iterator = vaques.iterator(); iterator.hasNext();) {
+            Vaca next = iterator.next();
+            litresCamio += next.getRaca().getLitresPerKg();
+            //Aqui hauriem de fer càlculs per treure el preu de la llet
+        }
+        if (litresCamio%2==0)
+            preuLlet +=0.1;
+        else
+            preuLlet -=0.1;
+        return preuLlet;
     }
 
     static boolean getComproLlet() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return litresCiutat <= 1000;
     }
 
     Ciutat(String nom, int litresCiutat) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.litresCiutat = litresCiutat;
+        this.nom = nom;
     }
 
 

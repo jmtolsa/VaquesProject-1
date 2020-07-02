@@ -73,7 +73,7 @@ public class CiutatTests {
                     
                 }
 
-                double resultat2 = Ciutat.getPreuLlet(); 
+                double resultat2 = Ciutat.getPreuLlet(camioFals); 
                 assertEquals(preuLlet, resultat2);
             }
 
